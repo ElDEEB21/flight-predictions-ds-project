@@ -32,5 +32,17 @@ In the first stage, the dataset underwent cleaning to prepare it for analysis an
 
 This stage ensures the dataset is well-structured, clean, and ready for the next phases, such as Exploratory Data Analysis (EDA) and modeling.
 
-## Next Steps
-The next step involves performing **Exploratory Data Analysis (EDA)** to understand trends and patterns within the dataset.
+## Stage 2: Exploratory Data Analysis (EDA)
+
+In this stage, we conducted **Exploratory Data Analysis (EDA)** to gain insights from the dataset. Visualizations helped us understand patterns and relationships among key features, such as airlines, departure cities, flight duration, and prices.
+
+### Key Insights:
+- **Airline & City Distribution**: Most flights originate from a few key cities, and certain airlines dominate the data.
+- **Price & Flight Duration**: There's a clear relationship between flight duration, number of stops, and price.
+- **Flight Class & Price**: Business class flights tend to have significantly higher prices compared to economy.
+- **Time of Departure**: Departure times influence price, with some periods being more expensive.
+
+These insights will guide us in selecting features for our prediction model in the next stage.
+
+## Next Steps:
+Proceed with feature selection and model building to predict flight prices.
