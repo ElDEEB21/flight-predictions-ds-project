@@ -30,11 +30,14 @@ In the first stage, the dataset underwent cleaning to prepare it for analysis an
    
 4. **Dropping Unnecessary Columns**: Columns that were not relevant to the analysis, such as `flight` and `Unnamed: 0`, were removed.
 
-This stage ensures the dataset is well-structured, clean, and ready for the next phases, such as Exploratory Data Analysis (EDA) and modeling.
+You can find the detailed code and notebook here:
+- [Data Cleaning Notebook](notebooks/01_data_cleaning.ipynb)
+- [Cleaned Dataset](data/processed/flights%20cleaned.csv)
+- [Python Script for Cleaning](src/cleaning.py)
 
 ## Stage 2: Exploratory Data Analysis (EDA)
 
-In this stage, we conducted **Exploratory Data Analysis (EDA)** to gain insights from the dataset. Visualizations helped us understand patterns and relationships among key features, such as airlines, departure cities, flight duration, and prices.
+In this stage, I conducted **Exploratory Data Analysis (EDA)** to gain insights from the dataset. Visualizations helped us understand patterns and relationships among key features, such as airlines, departure cities, flight duration, and prices.
 
 ### Key Insights:
 - **Airline & City Distribution**: Most flights originate from a few key cities, and certain airlines dominate the data.
@@ -42,7 +45,26 @@ In this stage, we conducted **Exploratory Data Analysis (EDA)** to gain insights
 - **Flight Class & Price**: Business class flights tend to have significantly higher prices compared to economy.
 - **Time of Departure**: Departure times influence price, with some periods being more expensive.
 
-These insights will guide us in selecting features for our prediction model in the next stage.
+Check out the EDA notebook and visualizations:
+- [EDA Notebook](notebooks/02_eda.ipynb)
+- [EDA Python Script](src/eda.py)
+- [EDA Visualizations](reports/figures)
+
+## Stage 3: Feature Engineering
+
+In this phase, I transformed the dataset to prepare it for model training.
+
+### Key Steps:
+- **One-Hot Encoding**: Categorical features such as 'Airline', 'Departure City', 'Arrival City', 'Flight Class', and time-related features were one-hot encoded to make them suitable for machine learning models.
+- **Feature Scaling**: Continuous variables like 'Flight Duration (hours)' and 'Days Until Departure' were scaled using StandardScaler to ensure consistent data ranges.
+- **Correlation Analysis**: A correlation matrix was generated to examine relationships between features and the target variable (Price). This helps in understanding which features are most influential in predicting prices.
+- **Train-Test Split**: The dataset was split into training (80%) and testing (20%) sets to evaluate the model's performance on unseen data.
+
+Check out the feature engineering notebook and files:
+- [Feature Engineering Notebook](notebooks/03_feature_engineering.ipynb)
+- [Feature Engineering Python Script](src/feature_engineering.py)
+- [Processed Training Data](data/processed/x_train_processed.csv)
+- [Processed Testing Data](data/processed/x_test_processed.csv)
 
 ## Next Steps:
-Proceed with feature selection and model building to predict flight prices.
+Proceed to model selection and training using the engineered features.
