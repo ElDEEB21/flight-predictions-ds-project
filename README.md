@@ -106,7 +106,46 @@ In this stage, I built and evaluated multiple machine learning models to predict
 
 ---
 
+## 🔍 Stage 5: Results Analysis and Model Tuning
+
+In this stage, I focused on fine-tuning the models and analyzing the results. I utilized **RandomizedSearchCV** for hyperparameter tuning and performed **cross-validation** to ensure model robustness.
+
+### 🔑 Key Steps:
+1. **Hyperparameter Tuning**: Employed RandomizedSearchCV to tune the following models:
+   - **RandomForestRegressor**
+   - **KNeighborsRegressor**
+   - **DecisionTreeRegressor**
+   - **LightGBM Regressor**
+
+2. **Evaluation Metrics**: Evaluated the tuned models using:
+   - **R² Score**: Indicates the proportion of variance in the dependent variable that is predictable from the independent variables.
+   - **RMSE (Root Mean Squared Error)**: Measures how well the predictions match the actual values.
+
+3. **Model Comparison**: Compared models based on R² score and RMSE to identify the best performer.
+
+4. **Cross-Validation**: Conducted 5-fold cross-validation on the best model (**RandomForestRegressor**) to ensure generalizability.
+
+5. **Feature Importance**: Analyzed feature importance for the best-performing model (RandomForestRegressor) to identify the most influential features in predicting flight prices.
+
+### 📈 Results:
+- **RandomForestRegressor** performed the best after hyperparameter tuning, achieving:
+  - **R² Score**: 0.985
+  - **RMSE**: 33.193 (on the test set)
+
+- Cross-validation results for **RandomForestRegressor** produced an average RMSE of **2100.35** across 5 folds.
+
+- **Feature Importance**: The top 5 most important features for flight price prediction were identified and are visualized in the figure below.
+
+![Top 5 Feature Importance - Random Forest](reports/figures/top_5_feature_importance_random_forest.png)
+
+### 📁 Files and Resources:
+- [Model Tuning and Results Analysis Notebook](notebooks/05_results_analysis.ipynb)
+- [Feature Importance Plot](reports/figures/top_5_feature_importance_random_forest.png)
+- [Model Tuning Python Script](src/results_analysis.py)
+
+---
+
 ## 🔜 Next Steps:
-Proceed to **Stage 5: Results Analysis and Model Tuning**, where I will fine-tune the best model, perform cross-validation, and analyze feature importance to enhance the model's predictive capability.
+Proceed to **Stage 6: Model Deployment**, where I will deploy the final model and create a user interface for predicting flight prices.
 
 
