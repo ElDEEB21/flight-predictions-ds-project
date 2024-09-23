@@ -145,7 +145,58 @@ In this stage, I focused on fine-tuning the models and analyzing the results. I 
 
 ---
 
-## 🔜 Next Steps:
-Proceed to **Stage 6: Model Deployment**, where I will deploy the final model and create a user interface for predicting flight prices.
+## 🚀 Stage 6: Deployment of the Flight Analysis and Prediction App
+
+In this stage, I deployed the Flight Price Prediction dashboard using **Streamlit** on Hugging Face. The app features two main sections:
+
+### 1. 🧑‍💻 Exploratory Data Analysis (EDA) Dashboard:
+   - Allows users to interactively explore the flight dataset with **Plotly** visualizations.
+   - Users can select from various visualizations, including:
+     - Airline distribution
+     - Price distribution
+     - Flight duration vs. price
+     - Price by airline and flight class
+     - Heatmap of airlines vs. flight class by price, and more.
+
+### 2. ✈️ Flight Price Prediction:
+   - Predicts flight prices based on factors such as the number of stops, airline, departure city, and flight class using a pre-trained **RandomForest** model.
+   - Users can input various parameters, and the model will return a predicted price in USD.
+   - **Note**: The **RandomForest** model is not included on GitHub due to file size limitations.
+
+### 🌐 App Link:
+You can interact with the app at the following link:  
+[Flight Analysis and Prediction App](https://huggingface.co/spaces/Eldeeb/flight-predictions-ds-project)
+
+---
+
+### 🔑 Key Features:
+- **Interactive Visualizations**: Powered by **Plotly** for real-time data exploration.
+- **Custom Styling**: Enhanced user experience through dynamic visuals and streamlined UI.
+- **Machine Learning-based Predictions**: Flight price predictions based on user input.
+- **Data Insights**: Analysis of flight durations, prices, and airline comparisons.
+
+### 📜 Code Highlights:
+The app's code handles:
+- **EDA**: Multiple interactive charts for exploring the dataset.
+- **Prediction**: A machine learning model (RandomForest) integrated for real-time predictions.
+- **User Input**: Dynamic inputs with one-hot encoding for the prediction model.
+
+---
+
+### 📷 Screenshots:
+![EDA Dashboard](reports/figures/EDA_Dashboard.png)  
+*Figure 1: Sample EDA Dashboard*
+
+![Prediction](reports/figures/Prediction.png)  
+*Figure 2: Flight Price Prediction*
+
+---
+
+### 🛠 Challenges:
+A significant challenge was managing large files like the trained **RandomForest** model (`RandomForest_model.pkl`). Due to GitHub's file size restrictions, the model was excluded from the repository and is loaded locally during deployment on **Hugging Face**.
+
+---
+
+
 
 
