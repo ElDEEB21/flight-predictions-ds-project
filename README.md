@@ -132,7 +132,7 @@ In this stage, I focused on fine-tuning the models and analyzing the results. I 
   - **R² Score**: 0.985
   - **RMSE**: 33.193 (on the test set)
 
-- Cross-validation results for **RandomForestRegressor** produced an average RMSE of **2100.35** across 5 folds.
+- Cross-validation results for **RandomForestRegressor** produced an average RMSE of **33.193** across 5 folds.
 
 - **Feature Importance**: The top 5 most important features for flight price prediction were identified and are visualized in the figure below.
 
