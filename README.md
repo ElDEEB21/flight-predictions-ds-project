@@ -7,7 +7,19 @@ By analyzing flight data and applying machine learning techniques, the project a
 
 ---
 
-## 🗂️ Dataset Description
+## Table of Contents
+- [Dataset Description](#dataset-description)
+- [Project Goal](#project-goal)
+- [Stage 1: Data Cleaning](#stage-1)
+- [Stage 2: Exploratory Data Analysis (EDA)](#stage-2)
+- [Stage 3: Feature Engineering](#stage-3)
+- [Stage 4: Modeling](#stage-4)
+- [Stage 5: Results Analysis and Model Tuning](#stage-5)
+- [Stage 6: Deployment](#stage-6)
+
+---
+
+## 🗂️ Dataset Description <a name="dataset-description"></a>
 The dataset provides detailed flight information to fuel the prediction model, including:
 - ✈️ **Airline**: Airline operating the flight.
 - 🌍 **Source City**: City from which the flight departs.
@@ -22,12 +34,12 @@ The dataset provides detailed flight information to fuel the prediction model, i
 
 ---
 
-## 🎯 Project Goal
+## 🎯 Project Goal <a name="project-goal"></a>
 The goal is to build a predictive model that estimates flight prices using the dataset's features, offering valuable insights for both passengers and airlines. The process follows a complete **data science pipeline**, starting from data cleaning and ending with model deployment.
 
 ---
 
-## 🛠️ Stage 1: Data Cleaning
+## 🛠️ Stage 1: Data Cleaning <a name="stage-1"></a>
 The dataset was meticulously cleaned to prepare it for analysis and modeling. Key actions included:
 1. 🔄 **Column Renaming**: Renamed columns to be more descriptive (e.g., `source_city` to `Departure City`).
 2. 🔢 **Numeric Conversion**: Converted categorical columns like `stops` to numerical values.
@@ -41,7 +53,7 @@ The dataset was meticulously cleaned to prepare it for analysis and modeling. Ke
 
 ---
 
-## 📊 Stage 2: Exploratory Data Analysis (EDA)
+## 📊 Stage 2: Exploratory Data Analysis (EDA) <a name="stage-2"></a>
 
 In this stage, I performed **Exploratory Data Analysis (EDA)** to uncover insights about the dataset and its features. Visualizations helped reveal key relationships:
 
@@ -58,7 +70,7 @@ In this stage, I performed **Exploratory Data Analysis (EDA)** to uncover insigh
 
 ---
 
-## 🛠️ Stage 3: Feature Engineering
+## 🛠️ Stage 3: Feature Engineering <a name="stage-3"></a>
 
 In this stage, I transformed the raw data to make it suitable for machine learning.
 
@@ -76,7 +88,7 @@ In this stage, I transformed the raw data to make it suitable for machine learni
 
 ---
 
-## 🛠️ Stage 4: Modeling
+## 🛠️ Stage 4: Modeling <a name="stage-4"></a>
 
 In this stage, I built and evaluated multiple machine learning models to predict flight prices based on the engineered features from Stage 3.
 
@@ -106,7 +118,7 @@ In this stage, I built and evaluated multiple machine learning models to predict
 
 ---
 
-## 🔍 Stage 5: Results Analysis and Model Tuning
+## 🔍 Stage 5: Results Analysis and Model Tuning <a name="stage-5"></a>
 
 In this stage, I focused on fine-tuning the models and analyzing the results. I utilized **RandomizedSearchCV** for hyperparameter tuning and performed **cross-validation** to ensure model robustness.
 
@@ -145,7 +157,7 @@ In this stage, I focused on fine-tuning the models and analyzing the results. I 
 
 ---
 
-## 🚀 Stage 6: Deployment of the Flight Analysis and Prediction App
+## 🚀 Stage 6: Deployment of the Flight Analysis and Prediction App <a name="stage-6"></a>
 
 In this stage, I deployed the Flight Price Prediction dashboard using **Streamlit** on Hugging Face. The app features two main sections:
 
